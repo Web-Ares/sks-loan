@@ -62,7 +62,7 @@ a{
     position: relative;
     height: 182px;
     z-index: 3;
-    margin-bottom: 45px;
+    margin-bottom: 36px;
     background: #fff;
 }
 .site__header-wrap{
@@ -72,8 +72,8 @@ a{
 }
 .site__header-town{
     position: absolute;
-    top: 60px;
-    left: 50%;
+    top: 57px;
+    left: 43.3%;
     font-size: 16px;
     color: #2d2d2d;
     transform: translateX(-50%);
@@ -99,7 +99,7 @@ a{
 }
 .site__footer-layout {
     position: relative;
-    width: 959px;
+    width: 970px;
     height: 62px;
     margin: 0 auto;
     padding-top: 23px;
@@ -111,13 +111,13 @@ a{
 }
 .site__footer-link{
     position: absolute;
-    right: 0;
-    top:23px;
+    right: 23px;
+    top: 20px;
     width: 88px;
     height: 15px;
 }
 .site__title{
-    padding: 15px 0;
+    padding: 24px 0 23px;
     font-size: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -143,16 +143,16 @@ a{
 }
 .header__menu-wrap .active,
 .header__menu-item:hover{
-    border-bottom: 5px solid #e41717;
+    border-bottom: 4px solid #e41717;
 }
 .header__menu-item{
     display: inline-block;
     vertical-align: middle;
-    padding: 17px 10px;
+    padding: 19px 20px 16px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    border-bottom: 5px solid transparent;
+    border-bottom: 4px solid transparent;
     transition: border .3s ease;
     -webkit-transition: border .3s ease;
 }
@@ -163,6 +163,7 @@ a{
     position: absolute;
     right: 0;
     padding-left: 24px;
+    padding-right: 7px;
 }
 .header__menu_personal:before{
     position: absolute;
@@ -207,8 +208,8 @@ a{
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
-    top: 24px;
-    left: 0;
+    top: 25px;
+    left: -3px;
 }
 .logo img{
     display: inline-block;
@@ -240,16 +241,15 @@ a{
 /* --------------- social --------------- */
 .social{
     position: absolute;
-    top: 38px;
+    top: 40px;
     right: 0;
-
 }
 .social a{
     display: inline-block;
     vertical-align: middle;
-    width:30px;
-    height: 30px;
-    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    margin-left: 11px;
     border-radius: 50%;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
@@ -287,12 +287,12 @@ a{
 
 /* --------------- request --------------- */
 .request{
-    margin-bottom: 45px;
+    margin-bottom: 23px;
 }
 .request__make{
     display: table-cell;
     width: 678px;
-    padding: 25px 0 15px;
+    padding: 26px 0 15px;
     background: #fff;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
@@ -308,11 +308,12 @@ a{
     width: 271px;
     padding: 200px 0;
     background: #fff no-repeat right bottom;
+    background-position-x: 142%;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
 }
 .request__sum{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #a3a3a3;
     font-size: 18px;
     text-align: left;
@@ -322,14 +323,14 @@ a{
     font-weight: 600;
 }
 .request__selection{
-    margin-bottom: 20px;
-    padding: 0 20px;
+    margin-bottom: 26px;
+    padding: 0 28px;
 }
 .request__selection-line{
     position: relative;
     width: 100%;
-    height: 6px;
-    margin-bottom: 18px;
+    height: 8px;
+    margin-bottom: 12px;
     border-radius: 5px;
     background: #ededed;
     cursor: pointer;
@@ -354,7 +355,7 @@ a{
 .request__selection-greed{
     position: relative;
     height: 11px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     text-align: justify;
  }
 .request__selection-greed:after{
@@ -376,7 +377,7 @@ a{
     color: #9d9d9d;
 }
 .request__result{
-    padding: 20px 20px;
+    padding: 11px 35px 0;
     border-top: 1px solid #ededed;
     text-align: justify;
 }
@@ -390,7 +391,7 @@ a{
     vertical-align: top;
     position: relative;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 25px;
 }
 .request__result span{
     display: block;
@@ -398,12 +399,12 @@ a{
     font-weight: 600;
 }
 .request__result div:first-child{
-    padding-left: 50px;
+    padding-left: 43px;
 }
 .request__result div:first-child:before{
     position: absolute;
-    top: 6px;
-    left: 0;
+    top: 10px;
+    left: -5px;
     width: 36px;
     height: 29px;
     background: url("../img/money-icon.png") no-repeat center;
@@ -414,15 +415,16 @@ a{
 /* --------------- hot-line --------------- */
 .hot-line{
     position: absolute;
-    top: 40px;
-    right: 105px;
+    top: 31px;
+    right: 123px;
     text-align: right;
 }
 .hot-line__tell{
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 24px;
     color: #191919;
+    cursor: default;
 }
 .hot-line__tell span{
     font-size: 16px;
@@ -453,15 +455,15 @@ a{
 /* --------------- site__our --------------- */
 .site__our{
     position: relative;
-    height: 8px;
+    height: 7px;
     background: #e41717;
 }
 .site__our-title{
     position: absolute;
     z-index: 4;
-    top: 8px;
+    top: 2px;
     left: 50%;
-    width: 143px;
+    width: 141px;
     padding: 8px 0;
     border-radius: 0 0 5px 5px;
     background: #e41717;
@@ -491,7 +493,8 @@ a{
 }
 .services__item{
     display:table-cell;
-    padding: 20px 0;
+    width: 20%;
+    padding: 32px 0 5px;
     border-left: 1px solid #f4f4f4;
 }
 .services__wrap .services__item:first-child{
@@ -500,23 +503,32 @@ a{
 .services__item-pic{
     width: 100%;
     height: 50px;
+    margin-bottom: 12px;
     background: no-repeat center;
 }
 .services__item-name{
+    margin-bottom: 4px;
     color: #e41717;
     font-weight: 600;
     text-transform: uppercase;
 }
 .services__item>span{
     display: block;
+    margin-bottom: 16px;
 }
 .services__item span span{
     font-weight: 600;
     font-size: 26px;
 }
 .services__item span.services__item-line {
-    border-bottom: 2px solid #f6f6f6;
     display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #f6f6f6;
+}
+span.services__item-before{
+    line-height: 28px;
+    margin-bottom: 0;
 }
 /* --------------- /services --------------- */
 
@@ -524,41 +536,54 @@ a{
 .news{
     display: table;
     width: 100%;
-    margin-bottom: 45px;
-    background: #fff;
+    margin-bottom: 39px;
+}
+.news .site__title {
+    padding: 29px 0 20px;
 }
 .news__col{
     position: relative;
     display: table-cell;
     vertical-align: top;
-    width: 48%;
+    width: 478px;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
+    background: #fff;
+}
+.news__col_first{
+    width: 455px;
 }
 .news__item_space{
-    width: 2%;
+    width: 12px;
     border: none;
     box-shadow: none;
-    background: #f6f6f6;
+    background: transparent;
 }
 .news__item{
-    padding: 0 10px 20px;
-    margin-bottom: 20px;
+    padding: 0 12px 16px;
+    margin: 0 16px 10px;
     border-bottom: 1px solid #f4f4f4;
     font-size: 14px;
     line-height: 20px;
 }
+.news__item p{
+    line-height: 26px;
+}
 .news__col .news__item:last-child{
-    margin-bottom: 40px;
+    margin-bottom: 57px;
     border-bottom: none;
+}
+.news__col_first .news__item:last-child{
+    margin-bottom: 20px;
 }
 .news__item h3{
     font-size: 16px;
     text-transform: uppercase;
+    line-height: 26px;
 }
 .news__item time{
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     font-size: 12px;
     color: #868686;
 }
@@ -587,7 +612,7 @@ a{
 /* --------------- reviews --------------- */
 .reviews{
     margin-bottom: 45px;
-    padding: 30px 33px 50px;
+    padding: 4px 33px 38px;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
     background: #fff;
@@ -597,12 +622,12 @@ a{
     padding: 0 60px;
 }
 .reviews__layout{
-    padding: 20px 30px 0;
+    padding: 32px 29px 0;
     text-align: left;
 }
 .reviews__layout p{
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 34px;
     font-style: italic;
     color: #000;
 }
@@ -615,26 +640,27 @@ a{
     content: "";
 }
 .reviews__layout p:before{
-    left: -30px;
+    left: -24px;
     top: -16px;
 }
 .reviews__layout p:after{
     right: 0;
-    bottom: -1px;
+    bottom: -4px;
     background: url("../img/reviews-after.png") no-repeat center;
 }
 .reviews__name{
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 20px;
     color: #000;
     text-align: center;
 }
 .reviews time{
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: #868686;
     text-align: center;
+    text-transform: uppercase;
 }
 .reviews__next, .reviews__prev {
     position: absolute;
@@ -657,7 +683,7 @@ a{
 .reviews__pagination{
     display: block;
     position: relative;
-    bottom: -20px;
+    bottom: -15px;
     top: auto;
     z-index: 2;
     text-align: center;
@@ -666,12 +692,12 @@ a{
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     opacity: 1;
     background: transparent;
     border-radius: 50%;
-    margin-left: 7px;
+    margin-left: 13px;
     cursor: pointer;
     -webkit-transition: background 0.2s ease;
     transition: background 0.2s ease;
@@ -712,15 +738,15 @@ span.swiper-pagination-bullet-active:before{
 
 /* --------------- advantages --------------- */
 .advantages{
-    margin-bottom: 45px;
-    padding: 30px 30px;
+    margin-bottom: 40px;
+    padding: 3px 30px 15px;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
     background: #fff;
     font-size: 14px;
 }
 .advantages__wrap{
-    margin-top: 30px;
+    margin-top: 47px;
     text-align: justify;
 }
 .advantages__wrap:after{
@@ -732,6 +758,7 @@ span.swiper-pagination-bullet-active:before{
     display: inline-block;
     vertical-align: top;
     width: 279px;
+    line-height: 23px;
     text-align: left;
 }
 .advantages__pic{
@@ -760,12 +787,11 @@ span.swiper-pagination-bullet-active:before{
 /* --------------- /advantages --------------- */
 
 /* --------------- map --------------- */
-.map{
+.map .site__title{
+    padding-bottom: 26px;
 }
-.map__wrap{
-    white-space: nowrap;
-    height: 460px;
-    background: #dedede;
+#map{
+    height: 450px;
 }
 /* --------------- /map --------------- */
 
@@ -776,7 +802,7 @@ span.swiper-pagination-bullet-active:before{
 }
 .loans-menu__wrap{
     position: relative;
-    width: 959px;
+    width: 965px;
     margin: 0 auto;
 }
 .loans-menu__title span{
@@ -785,7 +811,7 @@ span.swiper-pagination-bullet-active:before{
     text-transform: uppercase;
 }
 .loans-menu__title{
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-size: 14px;
     color: #ff1b1b;
 }
@@ -793,7 +819,8 @@ span.swiper-pagination-bullet-active:before{
     display: block;
     font-size: 12px;
     color: #474747;
-    line-height: 30px;
+    line-height: 26px;
+    font-weight: 600;
     text-transform: uppercase;
     text-decoration: underline;
 }
@@ -803,6 +830,14 @@ span.swiper-pagination-bullet-active:before{
 .loans-menu nav{
     display: inline-block;
     vertical-align: top;
-    margin-right: 20px;
+    margin-right: 62px;
+}
+.loans-menu .social {
+    top: 52px;
+    right: 49px;
+}
+.loans-menu .hot-line {
+    top: 42px;
+    right: 173px;
 }
 /* --------------- /loans-menu --------------- */

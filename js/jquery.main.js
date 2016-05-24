@@ -7,13 +7,13 @@ $(function(){
     var menu = $(".site__header");
 
     $(window).scroll(function(){
-        if ( $(this).scrollTop() > 100 && menu.hasClass("default") ){
+        if ( $(this).scrollTop() > 200 && menu.hasClass("default") ){
             menu.fadeOut('0',function(){
                 $(this).removeClass("default")
                     .addClass("fixed")
                     .fadeIn('0');
             });
-        } else if($(this).scrollTop() <= 100 && menu.hasClass("fixed")) {
+        } else if($(this).scrollTop() <= 200 && menu.hasClass("fixed")) {
             menu.fadeOut('0',function(){
                 $(this).removeClass("fixed")
                     .addClass("default")
