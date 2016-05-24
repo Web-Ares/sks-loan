@@ -4,6 +4,10 @@ $(function(){
         Slider($(this));
     });
 
+    $('.popup').each(function(){
+        new Popup($(this));
+    });
+
     var menu = $(".site__header");
 
     $(window).scroll(function(){
@@ -87,6 +91,77 @@ var Slider = function (obj) {
     //public properties
 
     //public methods
+
+    _init();
+};
+
+var Popup = function (obj) {
+
+    var _self = this,
+        _popup = obj,
+        _popupContent = _popup.find( '.popup__content' ),
+        _btnShow = $( '.btn_3' ),
+        _btnClose = _popup.find( '.popup__close' ),
+        _html = $( 'html' );
+
+    var _addEvents = function () {
+
+            _btnShow.on( {
+                click: function(){
+                    var curPopup = $( '.popup' );
+
+                    _showPopup( curPopup );
+
+                    return false;
+                }
+            } );
+
+            _btnClose.on( {
+                click: function() {
+                    var curPopup = $( this ).parents( '.popup' );
+                    _hidePopup( curPopup );
+                    return false;
+                }
+            } );
+            _popup.click( function() {
+                var curPopup = _popup;
+                if ( _self._noClosePopup ) {
+                    _self._noClosePopup = false;
+                    return false;
+                }
+                _hidePopup( curPopup );
+            });
+            _popupContent.on({
+                click: function(event) {
+                    event = event || window.event;
+                    event.stopPropagation();
+                }
+            });
+        },
+        _build = function(){
+            _self._noClosePopup = false;
+        },
+        _makePopupContent = function() {
+
+
+        },
+        _showPopup = function( curPopup ){
+            _popup.addClass( 'popup_opened' );
+            _popupContent.removeClass( 'active' );
+            curPopup.addClass( 'active' );
+        },
+        _hidePopup = function(curPopup){
+            curPopup.removeClass( 'popup_opened' );
+            _popupContent.removeClass( 'active' );
+            _html.css({
+                "overflow": ""
+            });
+        },
+        _init = function () {
+            _makePopupContent();
+            _build();
+            _addEvents();
+        };
 
     _init();
 };
