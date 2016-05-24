@@ -48,13 +48,13 @@ a{
     display: block;
     clear: both;
     width: 100%;
-    height: 100px;
+    height: 62px;
 }
 .site__content {
     position: relative;
     z-index: 2;
     width: 959px;
-    margin: 0 auto 50px;
+    margin: 0 auto;
     line-height: 20px;
 }
 .site__header {
@@ -92,12 +92,28 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100px;
+    height: 62px;
+    border-top: 2px solid #f4f4f4;
+    background: #f7f7f7;
 }
 .site__footer-layout {
-    width: 100%;
-    height: 100px;
-    background: blue;
+    position: relative;
+    width: 959px;
+    height: 62px;
+    margin: 0 auto;
+    padding-top: 23px;
+}
+.site__footer-copywriting{
+    font-size: 12px;
+    color: #343434;
+    text-transform: uppercase;
+}
+.site__footer-link{
+    position: absolute;
+    right: 0;
+    top:23px;
+    width: 88px;
+    height: 15px;
 }
 .site__title{
     padding: 15px 0;
@@ -167,22 +183,22 @@ a{
     width: 75px;
     margin-right: 15px;
 }
-.logo div{
+.logo__name{
     display: inline-block;
     vertical-align: middle;
     width: 180px;
 }
-.logo div span{
+.logo__name span{
     display: block;
 }
-.logo div span:first-child{
+.logo__name span:first-child{
     margin-bottom: 5px;
     font-size: 32px;
     color: #e41717;
     font-weight: 600;
     text-transform: uppercase;
 }
-.logo div span:last-child{
+.logo__name span:last-child{
     font-size: 13px;
     line-height: 16px;
 }
@@ -217,6 +233,149 @@ a{
     background-size: 22px 22px;
 }
 /* --------------- /social --------------- */
+
+/* --------------- btn --------------- */
+.btn{
+    display: inline-block;
+    padding: 10px 54px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #e41717;
+    text-align: center;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.btn:hover{
+    opacity: .7;
+}
+/* --------------- /btn --------------- */
+
+/* --------------- request --------------- */
+.request{
+    margin-bottom: 45px;
+}
+.request__make{
+    display: table-cell;
+    width: 678px;
+    padding: 25px 0 15px;
+    background: #fff;
+    border: 1px solid #bcbcbc;
+    box-shadow: 0 3px 5px #bcbcbc;
+    text-align: center;
+}
+.request__space{
+    display: table-cell;
+    width: 10px;
+    background: transparent;
+}
+.request__stock{
+    display: table-cell;
+    width: 271px;
+    padding: 200px 0;
+    background: #fff no-repeat right bottom;
+    border: 1px solid #bcbcbc;
+    box-shadow: 0 3px 5px #bcbcbc;
+}
+.request__sum{
+    margin-bottom: 20px;
+    color: #a3a3a3;
+    font-size: 18px;
+    text-align: left;
+}
+.request__sum span{
+    color: #000;
+    font-weight: 600;
+}
+.request__selection{
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.request__selection-line{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    background: #ededed;
+    cursor: pointer;
+}
+.request__selection-line div{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: #eb5151;
+}
+.request__selection-line div:after{
+    position: absolute;
+    top: -10px;
+    right: -13px;
+    width: 27px;
+    height: 33px;
+    background: url("../img/select.png") no-repeat center;
+    content: "";
+}
+.request__selection-greed{
+    position: relative;
+    height: 11px;
+    margin-bottom: 5px;
+    text-align: justify;
+ }
+.request__selection-greed:after{
+    display: inline-block;
+    width: 100%;
+    content: "";
+}
+.request__selection-greed span{
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 10px;
+    background: #ededed;
+}
+.request__selection-greed div{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    color: #9d9d9d;
+}
+.request__result{
+    padding: 20px 20px;
+    border-top: 1px solid #ededed;
+    text-align: justify;
+}
+.request__result:after{
+    display: inline-block;
+    width: 100%;
+    content: "";
+}
+.request__result div{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+}
+.request__result span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+.request__result div:first-child{
+    padding-left: 50px;
+}
+.request__result div:first-child:before{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 36px;
+    height: 29px;
+    background: url("../img/money-icon.png") no-repeat center;
+    content: "";
+}
+/* --------------- /request --------------- */
 
 /* --------------- hot-line --------------- */
 .hot-line{
@@ -262,6 +421,7 @@ a{
 }
 .site__our-title{
     position: absolute;
+    z-index: 4;
     top: 8px;
     left: 50%;
     width: 143px;
@@ -273,6 +433,7 @@ a{
     text-align: center;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    cursor: pointer;
 }
 /* --------------- /site__our --------------- */
 
@@ -561,13 +722,50 @@ span.swiper-pagination-bullet-active:before{
 }
 /* --------------- /advantages --------------- */
 
-/* --------------- branches --------------- */
+/* --------------- map --------------- */
 .map{
 }
 .map__wrap{
     white-space: nowrap;
     height: 460px;
-    margin-bottom: 45px;
     background: #dedede;
 }
-/* --------------- /branches --------------- */
+/* --------------- /map --------------- */
+
+/* --------------- loans-menu --------------- */
+.loans-menu{
+    background: #fff;
+    padding: 30px 0;
+}
+.loans-menu__wrap{
+    position: relative;
+    width: 959px;
+    margin: 0 auto;
+}
+.loans-menu__title span{
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.loans-menu__title{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ff1b1b;
+}
+.loans-menu__item{
+    display: block;
+    font-size: 12px;
+    color: #474747;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.loans-menu__item:hover{
+    text-decoration: none;
+}
+.loans-menu nav{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+/* --------------- /loans-menu --------------- */
