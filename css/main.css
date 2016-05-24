@@ -39,6 +39,7 @@
     z-index: 1;
     color: #000;
     font-family: "Open Sans", sans-serif;
+    cursor: default;
 }
 a{
     color: #000;
@@ -171,6 +172,38 @@ a{
     background: url(../img/personal-area.png) center;
     content: "";
 }
+.fixed{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 150px;
+    border-top: 5px solid #e41717;
+}
+.fixed .logo {
+    top: 8px;
+}
+.fixed .logo img {
+    width: 55px;
+}
+.fixed .hot-line__call,
+.fixed .site__header-town,
+.fixed .social{
+    display: none;
+}
+.fixed .hot-line .btn{
+    display: block;
+}
+.fixed .logo__name span:first-child {
+    font-size: 23px;
+}
+.fixed .logo__name span:last-child {
+    font-size: 10px;
+}
+.fixed .hot-line{
+    top: 9px;
+    right: 0;
+}
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
@@ -245,6 +278,7 @@ a{
     text-align: center;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
+    cursor: pointer;
 }
 .btn:hover{
     opacity: .7;
@@ -410,6 +444,9 @@ a{
     height: 20px;
     background: url("../img/hot-line.png") no-repeat center;
     content: "";
+}
+.hot-line .btn{
+    display: none;
 }
 /* --------------- /hot-line --------------- */
 

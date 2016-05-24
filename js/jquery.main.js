@@ -4,6 +4,24 @@ $(function(){
         Slider($(this));
     });
 
+    var menu = $(".site__header");
+
+    $(window).scroll(function(){
+        if ( $(this).scrollTop() > 100 && menu.hasClass("default") ){
+            menu.fadeOut('0',function(){
+                $(this).removeClass("default")
+                    .addClass("fixed")
+                    .fadeIn('0');
+            });
+        } else if($(this).scrollTop() <= 100 && menu.hasClass("fixed")) {
+            menu.fadeOut('0',function(){
+                $(this).removeClass("fixed")
+                    .addClass("default")
+                    .fadeIn('0');
+            });
+        }
+    });
+
     $.each($('.map'), function () {
 
         var myMap;
