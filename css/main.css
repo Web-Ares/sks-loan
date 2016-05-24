@@ -18,13 +18,13 @@
 
 /* --------------- placeholder --------------- */
 ::-webkit-input-placeholder {
-    color: #000;
+    color: #a3a3a3;
 }
 :-moz-placeholder {
-    color: #000;
+    color: #a3a3a3;
 }
 .placeholder {
-    color: #000;
+    color: #a3a3a3;
 }
 /* --------------- /placeholder --------------- */
 
@@ -40,6 +40,9 @@
     color: #000;
     font-family: "Open Sans", sans-serif;
     cursor: default;
+}
+.site_personal{
+    background: #fff;
 }
 a{
     color: #000;
@@ -86,6 +89,21 @@ a{
 }
 .site__header-town a:hover{
    text-decoration: none;
+}
+.site__header_personal{
+    height: 135px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid #f4f4f4;
+}
+.site__header_personal .hot-line{
+    top: 44px;
+    right: 0;
+}
+.site__header_personal .logo{
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 .site__footer {
     z-index: 2;
@@ -273,12 +291,16 @@ a{
     padding: 10px 54px;
     color: #fff;
     font-size: 16px;
+    border: none;
     border-radius: 5px;
     background: #e41717;
     text-align: center;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
     cursor: pointer;
+}
+.btn_1{
+    padding: 11px 40px;
 }
 .btn:hover{
     opacity: .7;
@@ -788,7 +810,11 @@ span.swiper-pagination-bullet-active:before{
 
 /* --------------- map --------------- */
 .map .site__title{
+    position: relative;
     padding-bottom: 26px;
+}
+.map .site__title img{
+    margin-right: 8px;
 }
 #map{
     height: 450px;
@@ -841,3 +867,97 @@ span.swiper-pagination-bullet-active:before{
     right: 173px;
 }
 /* --------------- /loans-menu --------------- */
+
+/* --------------- personal --------------- */
+.personal{
+    max-width: 462px;
+    margin: 0 auto 175px;
+    text-align: center;
+}
+.personal fieldset{
+    text-align: left;
+}
+.personal input{
+    width: 100%;
+    height: 40px;
+    font: 18px 'Open Sans';
+    border-radius:3px;
+    border: 1px solid #a3a3a3;;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    background: #f9f9f9;
+    transition: border-color .3s ease;
+    -wbkit-transition: border-color .3s ease;
+}
+.personal label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #a3a3a3;
+}
+.personal__check label {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    width: 340px;
+}
+.personal .personal__check input{
+    display: inline-block;
+    vertical-align: middle;
+    visibility: hidden;
+    width: 16px;
+    height: 16px;
+}
+.personal .personal__check label {
+    display: inline-block;
+    position: relative;
+    width: 13px;
+    height: 13px;
+    color: #a3a3a3;
+}
+.personal__check input[type="checkbox"] + .personal__checked{
+    position: absolute;
+    z-index: 2;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid #a3a3a3;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+.personal__check-title{
+    position: absolute;
+    z-index: 2;
+    top: -1px;
+    left: 37px;
+    width: 400px;
+    height: 100%;
+    color: #000;
+}
+.personal__check input[type="checkbox"]:checked + .personal__checked{
+    background: #f9f9f9 url(../img/icon-right.png) no-repeat center;
+}
+.personal__check>span{
+    padding-left:5px;
+    font-weight: 400;
+}
+.personal__check{
+    margin-bottom: 18px;
+}
+.forgot-password{
+    display: block;
+    margin-top: -9px;
+    margin-bottom: 22px;
+    color: #e41717;
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: left;
+}
+.forgot-password:hover{
+    text-decoration: none;
+}
+.personal .site__title{
+    padding-bottom: 19px;
+}
+/* --------------- /personal --------------- */
