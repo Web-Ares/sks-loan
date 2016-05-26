@@ -1089,6 +1089,120 @@ span.swiper-pagination-bullet-active:before{
 }
 /* --------------- /personal --------------- */
 
+/* --------------- bread-crumbs --------------- */
+.bread-crumbs{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.bread-crumbs a{
+    content: '»';
+}
+/* --------------- bread-crumbs --------------- */
+
+/* --------------- text-wrap --------------- */
+.text-wrap{
+    margin-bottom: 40px;
+    padding: 3px 30px 15px;
+    border: 1px solid #bcbcbc;
+    box-shadow: 0 3px 5px #bcbcbc;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 26px;
+}
+.text-wrap h1{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.text-wrap h2{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.text-wrap h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #e41717;
+}
+.text-wrap__mark1{
+    margin-bottom: 12px;
+    border: 1px solid #ecc9c9;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #e41717;
+    background-color: #fff3eb;
+}
+.text-wrap__mark2{
+    margin-bottom: 12px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #000;
+    background-color: #ededed;
+}
+.text-wrap ul {
+    margin-bottom: 24px;
+    padding-top: 10px;
+}
+.text-wrap ul li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 21px;
+}
+.text-wrap ul li:before{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 14px;
+    background: url("../img/icon-list.png") no-repeat 0 0;
+    content: '';
+}
+.text-wrap ol {
+    margin-bottom: 24px;
+    padding-top: 10px;
+    counter-reset: list 0;
+}
+.text-wrap li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 40px;
+}
+.text-wrap ol li:before{
+    counter-increment: list;
+    content: counter(list);
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 33px;
+    height: 27px;
+    border-radius: 3px;
+    background-color: #c3c3c3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    text-align: center;
+}
+.span1{
+    color: #ffcb08;
+    font-weight: 600;
+}
+
+.span2{
+    color: #0095da;
+    font-weight: 600;
+}
+/* --------------- /text-wrap --------------- */
+
 /* --------------- pay --------------- */
 .pay{
     width: 465px;
