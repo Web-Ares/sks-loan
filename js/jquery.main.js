@@ -1,7 +1,59 @@
 $(function(){
 
+    var sum = document.getElementById('make-sum'),
+        week = document.getElementById('make-week'),
+        moneyPay = document.getElementById('money-pay');
+
+    noUiSlider.create(sum, {
+        start: 3000,
+        step: 100,
+        range: {
+            'min': 0,
+            'max': 50000
+        }
+    });
+
+    noUiSlider.create(week, {
+        start: 6,
+        step: 1,
+        range: {
+            'min': 5,
+            'max': 18
+        }
+    });
+
+    noUiSlider.create(moneyPay, {
+        start: 60,
+        step: 10,
+        range: {
+            'min': 60,
+            'max': 3060
+        }
+    });
+
+    sum.noUiSlider.on('update', function( values, handle ) {
+        $('.pay-sum').text(parseInt(values[handle])); /*.innerHTML*/
+        $('#request-send-sum').val(parseInt(values[handle])); /*.innerHTML*/
+    });
+    week.noUiSlider.on('update', function( values, handle ) {
+        $('.pay-week').text(parseInt(values[handle])); /*.innerHTML*/
+        $('#request-send-week').val(parseInt(values[handle])); /*.innerHTML*/
+    });
+    moneyPay.noUiSlider.on('update', function( values, handle ) {
+        $('#get-number').val(parseInt(values[handle])); /*.innerHTML*/
+    });
+
+
+   /* input.addEventListener('change', function(){
+        keypressSlider.noUiSlider.set([null, this.value]);
+    });*/
+
     $('.swiper-container').each(function () {
         Slider($(this));
+    });
+
+    $('.sites').each(function () {
+        Sites($(this));
     });
 
     $('.popup').each(function(){
@@ -11,13 +63,13 @@ $(function(){
     var menu = $(".site__header");
 
     $(window).scroll(function(){
-        if ( $(this).scrollTop() > 200 && menu.hasClass("default") ){
+        if ( $(this).scrollTop() > 190 && menu.hasClass("default") ){
             menu.fadeOut('0',function(){
                 $(this).removeClass("default")
                     .addClass("fixed")
                     .fadeIn('0');
             });
-        } else if($(this).scrollTop() <= 200 && menu.hasClass("fixed")) {
+        } else if($(this).scrollTop() <= 190 && menu.hasClass("fixed")) {
             menu.fadeOut('0',function(){
                 $(this).removeClass("fixed")
                     .addClass("default")
@@ -100,7 +152,7 @@ var Popup = function (obj) {
     var _self = this,
         _popup = obj,
         _popupContent = _popup.find( '.popup__content' ),
-        _btnShow = $( '.btn_3' ),
+        _btnShow = $( '.header__menu_pay' ),
         _btnClose = _popup.find( '.popup__close' ),
         _html = $( 'html' );
 
@@ -162,6 +214,44 @@ var Popup = function (obj) {
             _build();
             _addEvents();
         };
+
+    _init();
+};
+
+var Sites = function (obj) {
+    //private properties
+    var _self = this,
+        _tail = obj.find($('.site__our-title')),
+        _close = obj.find($('.sites__close')),
+        _obj = obj;
+
+    //private methods
+    var _addEvents = function () {
+            _tail.on({
+                click: function () {
+                    if (!_obj.hasClass('active')){
+                        _obj.addClass('active');
+                        //_tail.addClass('steel');
+                    } else {
+                        _obj.removeClass('active');
+                        _tail.removeClass('steel');
+                    }
+                }
+            })
+            _close.on({
+                click: function () {
+                    _obj.removeClass('active');
+                    _tail.removeClass('steel');
+                }
+            })
+        },
+        _init = function () {
+            _addEvents();
+        };
+
+    //public properties
+
+    //public methods
 
     _init();
 };
