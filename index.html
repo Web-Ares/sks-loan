@@ -212,15 +212,15 @@
 
                         <div>
                             Вы берете
-                            <span><span class="pay-sum">5000</span> руб</span>
+                            <span><span class="pay-sum"></span> руб</span>
                         </div>
                         <div>
                             До (включительно)
-                            <span>28 апреля, 2016</span>
+                            <span id="present-data"></span>
                         </div>
                         <div>
                             Вы возвращаете
-                            <span>28 апреля, 2016</span>
+                            <span id="end-data"></span>
                         </div>
 
                     </div>
@@ -228,9 +228,11 @@
 
                     <!-- request-send -->
                     <form class="request-send">
-                        <input name="sum" type="text" id="request-send-sum">
+                        <input name="sum" type="text" id="request-send-sum"/>
                         <button type="submit" class="btn btn_3">Оформить заявку</button>
-                        <input name="weeks" type="text" id="request-send-week">
+                        <input name="now-date" type="text" id="now_date"/>
+                        <input name="end-data" type="text" id="end_data"/>
+                        <input name="weeks" type="text" id="weeks"/>
                     </form>
                     <!-- /request-send -->
 
@@ -583,10 +585,18 @@
 
             <!-- map__item-wrap -->
             <div class="map__item-wrap">
-                <span class="map__item" data-coord="54.720444, 56.008557"></span>
-                <span class="map__item" data-coord="54.753222, 56.030071"></span>
-                <span class="map__item" data-coord="54.754578, 56.004469"></span>
-                <span class="map__item" data-coord="54.789633, 56.034787"></span>
+                <span class="map__item" data-coord="54.720444, 56.008557" data-icon-size="23, 35" data-icon="img/map_icon.png">
+                    <a href="#">ул. Менделеева, 229/1</a>
+                </span>
+                <span class="map__item" data-coord="54.753222, 56.030071" data-icon-size="23, 23" data-icon="img/map-icon02.png">
+                    <a href="#">ул. Революционная д.34</a>
+                </span>
+                <span class="map__item" data-coord="54.754578, 56.004469" data-icon-size="23, 23" data-icon="img/map-icon02.png">
+                    <a href="#">ул. Пр.Октября д. 52</a>
+                </span>
+                <span class="map__item" data-coord="54.789633, 56.034787" data-icon-size="23, 23" data-icon="img/map-icon02.png">
+                    <a href="#">ул. Революционная д.34</a>
+                </span>
             </div>
             <!-- /map__item-wrap -->
 
