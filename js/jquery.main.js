@@ -1,73 +1,73 @@
 $(function(){
 
-    var sum = document.getElementById('make-sum'),
-        week = document.getElementById('make-week'),
-        moneyPay = document.getElementById('money-pay');
+    $.each($('.request'), function () {
 
-    noUiSlider.create(sum, {
-        start: 3000,
-        step: 100,
-        range: {
-            'min': 0,
-            'max': 50000
-        }
+        var sum = document.getElementById('make-sum'),
+            week = document.getElementById('make-week');
+
+        noUiSlider.create(sum, {
+            start: 3000,
+            step: 100,
+            range: {
+                'min': 0,
+                'max': 50000
+            }
+        });
+
+        noUiSlider.create(week, {
+            start: 6,
+            step: 1,
+            range: {
+                'min': 5,
+                'max': 18
+            }
+        });
+
+        var date = new Date(),
+            options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+        $('#present-data').text(date.toLocaleString("ru", options));
+        $('#now_date').val(date.toLocaleString("ru", options)); /*.innerHTML*/
+
+        sum.noUiSlider.on('update', function( values, handle ) {
+            $('.pay-sum').text(parseInt(values[handle])); /*.innerHTML*/
+            $('#request-send-sum').val(parseInt(values[handle])); /*.innerHTML*/
+        });
+        week.noUiSlider.on('update', function( values, handle ) {
+            $('.pay-week').text(parseInt(values[handle])); /*.innerHTML*/
+            $('#weeks').val(parseInt(values[handle])); /*.innerHTML*/
+            var today = new Date(),
+                inWeek = new Date();
+            inWeek.setDate(today.getDate()+7*parseInt(values[handle]));
+            $('#end-data').text(inWeek.toLocaleString("ru", options) );
+            $('#end_data').val(inWeek.toLocaleString("ru", options)); /*.innerHTML*/
+
+        });
+
+
     });
 
-    noUiSlider.create(week, {
-        start: 6,
-        step: 1,
-        range: {
-            'min': 5,
-            'max': 18
-        }
-    });
+        $.each($('.pay'), function () {
+            var
+                moneyPay = document.getElementById('money-pay');
 
-    noUiSlider.create(moneyPay, {
-        start: 60,
-        step: 10,
-        range: {
-            'min': 60,
-            'max': 3060
-        }
-    });
+            noUiSlider.create(moneyPay, {
+                start: 60,
+                step: 10,
+                range: {
+                    'min': 60,
+                    'max': 3060
+                }
+            });
 
-    var date = new Date();
-    var options = {
-        /* era: 'long',*/
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-        /*weekday: 'long',
-         timezone: 'UTC',
-         hour: 'numeric',
-         minute: 'numeric',
-         second: 'numeric'*/
-    };
-    $('#present-data').text(date.toLocaleString("ru", options));
-    $('#now_date').val(date.toLocaleString("ru", options)); /*.innerHTML*/
-
-    sum.noUiSlider.on('update', function( values, handle ) {
-        $('.pay-sum').text(parseInt(values[handle])); /*.innerHTML*/
-        $('#request-send-sum').val(parseInt(values[handle])); /*.innerHTML*/
-    });
-    week.noUiSlider.on('update', function( values, handle ) {
-        $('.pay-week').text(parseInt(values[handle])); /*.innerHTML*/
-        $('#weeks').val(parseInt(values[handle])); /*.innerHTML*/
-        var today = new Date(),
-            inWeek = new Date();
-        inWeek.setDate(today.getDate()+7*parseInt(values[handle]));
-        $('#end-data').text(inWeek.toLocaleString("ru", options) );
-        $('#end_data').val(inWeek.toLocaleString("ru", options)); /*.innerHTML*/
+            moneyPay.noUiSlider.on('update', function( values, handle ) {
+                $('#get-number').val(parseInt(values[handle])); /*.innerHTML*/
+        });
 
     });
-    moneyPay.noUiSlider.on('update', function( values, handle ) {
-        $('#get-number').val(parseInt(values[handle])); /*.innerHTML*/
-    });
-
-
-    /* input.addEventListener('change', function(){
-         keypressSlider.noUiSlider.set([null, this.value]);
-     });*/
 
     $('.swiper-container').each(function () {
         Slider($(this));

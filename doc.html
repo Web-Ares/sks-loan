@@ -10,6 +10,7 @@
     <title>Title</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/nouislider.css">
     <link rel="stylesheet" href="css/main.css">
     
 </head>
@@ -18,17 +19,33 @@
     <!-- site -->
     <div class="site">
 
-        <!-- site__our -->
-        <div class="site__our">
-
-            <!-- site__our-title -->
-            <div class="site__our-title">
-                Наши сайты
+        <!-- sites -->
+        <div class="sites">
+            <!-- site__header-layout -->
+            <div class="site__header-layout">
+                <!-- sites__close -->
+                <div class="sites__close"></div>
+                <!-- /sites__close -->
+                <!-- site__title -->
+                <h2 class="site__title">
+                    <span>Все сайты группы компаний СКС ломбард</span>
+                </h2>
+                <!-- /site__title -->
+                <a href="#" target="_blank">
+                    <img src="img/site-001.jpg" alt="img"/>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="img/site-002.jpg" alt="img"/>
+                </a>
+                <!-- sites__tail -->
+                <div class="site__our-title">
+                    <span>Наши сайты</span>
+                </div>
+                <!-- /sites__tail -->
             </div>
-            <!-- /site__our-title -->
-
+            <!-- /site__header-layout -->
         </div>
-        <!-- /site__our -->
+        <!-- /sites -->
 
         <!-- site__header -->
         <header class="site__header default">
@@ -37,13 +54,13 @@
             <div class="site__header-wrap">
 
                 <!-- logo -->
-                <h1 class="logo">
+                <a href="/" class="logo">
                     <img src="img/logo.png" alt="Logo">
                     <span class="logo__name">
                         <span>Займы</span>
                         <span>Финансовая поддержка - быстрые займы</span>
                     </span>
-                </h1>
+                </a>
                 <!-- /logo -->
 
                 <!-- site__header-town -->
@@ -153,10 +170,18 @@
 
             <!-- map__item-wrap -->
             <div class="map__item-wrap">
-                <span class="map__item" data-coord="54.720444, 56.008557"></span>
-                <span class="map__item" data-coord="54.753222, 56.030071"></span>
-                <span class="map__item" data-coord="54.754578, 56.004469"></span>
-                <span class="map__item" data-coord="54.789633, 56.034787"></span>
+                <span class="map__item" data-coord="54.720444, 56.008557" data-icon-size="23, 35" data-icon="img/map_icon.png">
+                    <a href="#">ул. Менделеева, 229/1</a>
+                </span>
+                <span class="map__item" data-coord="54.753222, 56.030071" data-icon-size="23, 23" data-icon="img/map-icon02.png">
+                    <a href="#">ул. Революционная д.34</a>
+                </span>
+                <span class="map__item" data-coord="54.754578, 56.004469" data-icon-size="23, 23" data-icon="img/map-icon02.png">
+                    <a href="#">ул. Пр.Октября д. 52</a>
+                </span>
+                <span class="map__item" data-coord="54.789633, 56.034787" data-icon-size="23, 23" data-icon="img/map-icon02.png">
+                    <a href="#">ул. Революционная д.34</a>
+                </span>
             </div>
             <!-- /map__item-wrap -->
 
@@ -183,7 +208,7 @@
                 </nav>
 
                 <nav>
-                    <a class="loans-menu__item" href="#">Оплатить % Онлайн</a>
+                    <a class="loans-menu__item header__menu_pay" href="#">Оплатить % Онлайн</a>
                     <a class="loans-menu__item" href="#">Личный кабинет</a>
                 </nav>
 
@@ -259,14 +284,14 @@
                     <form class="pay__get">
 
                         <fieldset class="pay__number">
-                            <label>НОМЕР ДОГОВОРА</label>УФ
-                            <input type="text" id="pay-number-uf" placeholder="1" required=""/> —
-                            <input type="text" id="pay-number" placeholder="123456789" required=""/> ?
+                            <label for="pay-number-uf">НОМЕР ДОГОВОРА</label>УФ
+                            <input name="numberUF" type="text" id="pay-number-uf" placeholder="1" required=""/> —
+                            <input name="number" id="pay-number" placeholder="123456789" required=""/> ?
                         </fieldset>
 
                         <fieldset class="pay__surname">
                             <label for="pay-surname">ФАМИЛИЯ</label>
-                            <input type="text" id="pay-surname" required="">
+                            <input name="surname" type="text" id="pay-surname" required="">
                         </fieldset>
 
                         <!-- pay -->
@@ -282,6 +307,76 @@
 
                     </form>
 
+                    <!-- pay__information -->
+                    <div class="pay__information">
+                        <div>60.000 р.</div>
+                        <span>Задолженность по процентам клиента</span>
+                    </div>
+                    <!-- /pay__information -->
+
+                    <!-- pay__information -->
+                    <div class="pay__information">
+                        <div>3.060 р.</div>
+                        <span>Общая сумма погашения договора клиента</span>
+                    </div>
+                    <!-- /pay__information -->
+
+                    <!-- pay__information -->
+                    <div class="pay__information">
+                        <div>06.04.2016</div>
+                        <span>Дата погашения задолженности</span>
+                    </div>
+                    <!-- /pay__information -->
+
+                    <!-- pay__sum -->
+                    <div class="pay__sum">
+                        Сумма к оплате:
+                        <input type="number" id="get-number" value="60" placeholder="60"/>
+                        руб
+                    </div>
+                    <!-- /pay__sum -->
+
+                    <!-- request__selection-line -->
+                    <div class="pay__selection-line">
+
+                        <div id="money-pay" class="noUi-target noUi-ltr noUi-horizontal noUi-connect"></div>
+
+                    </div>
+                    <!-- /request__selection-line -->
+
+                    <!-- request__selection-greed -->
+                    <div class="request__selection-greed">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- /request__selection-greed -->
+
+                    <!-- request__selection-greed -->
+                    <div class="request__selection-greed">
+                        <div>60</div>
+                        <div>3060</div>
+                    </div>
+                    <!-- /request__selection-greed -->
+
                 </div>
                 <!-- /pay -->
 
@@ -295,6 +390,7 @@
     <!-- /popup -->
 
     <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/nouislider.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <script src="js/jquery.main.js"></script>

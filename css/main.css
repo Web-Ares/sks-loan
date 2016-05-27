@@ -147,10 +147,17 @@ a{
     height: 15px;
 }
 .site__title{
+    display: inline-block;
     padding: 24px 0 23px;
     font-size: 20px;
     text-align: center;
+    font-weight: 700;
     text-transform: uppercase;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+a.site__title:hover{
+    opacity: .7;
 }
 .site__title span{
     color: #e41717;
@@ -388,6 +395,7 @@ a{
     box-shadow: 0 0 10px #fff;
 }
 .sites .site__title{
+    display: block;
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -450,7 +458,13 @@ a{
     background-position-x: 142%;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    /*cursor: pointer;*/
 }
+/*.request__stock:hover{
+    opacity: .7;
+}*/
 .request__sum{
     margin-bottom: 25px;
     color: #a3a3a3;
@@ -702,6 +716,7 @@ span.services__item-before{
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
     background: #fff;
+    text-align: center;
 }
 .news__col_first{
     width: 455px;
@@ -718,6 +733,7 @@ span.services__item-before{
     border-bottom: 1px solid #f4f4f4;
     font-size: 14px;
     line-height: 20px;
+    text-align: left;
 }
 .news__item p{
     line-height: 26px;
@@ -769,6 +785,7 @@ span.services__item-before{
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
     background: #fff;
+    text-align: center;
 }
 .reviews__wrap{
     position: relative;
@@ -897,6 +914,7 @@ span.swiper-pagination-bullet-active:before{
     box-shadow: 0 3px 5px #bcbcbc;
     background: #fff;
     font-size: 14px;
+    text-align: center;
 }
 .advantages__wrap{
     margin-top: 47px;
@@ -952,6 +970,9 @@ span.swiper-pagination-bullet-active:before{
 }
 .map__item a{
     display: none;
+}
+.map {
+    text-align: center;
 }
 /* --------------- /map --------------- */
 
