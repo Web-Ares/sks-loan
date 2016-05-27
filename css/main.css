@@ -1091,45 +1091,68 @@ span.swiper-pagination-bullet-active:before{
 
 /* --------------- bread-crumbs --------------- */
 .bread-crumbs{
+    margin-bottom: 22px;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
 }
 .bread-crumbs a{
+    position: relative;
+    padding-right: 29px;
+    color: #868686;
+}
+.bread-crumbs a:after{
+    position: absolute;
+    top: -5px;
+    right: 9px;
     content: '»';
+}
+.bread-crumbs span{
+    color: #e41717;
 }
 /* --------------- bread-crumbs --------------- */
 
 /* --------------- text-wrap --------------- */
 .text-wrap{
     margin-bottom: 40px;
-    padding: 3px 30px 15px;
+    padding: 16px 21px 15px;
     border: 1px solid #bcbcbc;
     box-shadow: 0 3px 5px #bcbcbc;
     background-color: #fff;
     font-size: 14px;
     line-height: 26px;
 }
+.text-wrap p{
+    margin-bottom: 30px;
+}
+.text-wrap a:hover{
+    text-decoration: none;
+}
 .text-wrap h1{
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     text-transform: uppercase;
 }
 .text-wrap h2{
+    margin-bottom: 6px;
     font-size: 16px;
     font-weight: 600;
     line-height: 26px;
     text-transform: uppercase;
 }
 .text-wrap h3{
+    margin-bottom: 7px;
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
     color: #e41717;
 }
-.text-wrap__mark1{
+.text-wrap__mark1 h4{
+    display: inline-block;
     margin-bottom: 12px;
+    padding: 7px 15px;
     border: 1px solid #ecc9c9;
     border-radius: 5px;
     font-size: 18px;
@@ -1138,8 +1161,10 @@ span.swiper-pagination-bullet-active:before{
     color: #e41717;
     background-color: #fff3eb;
 }
-.text-wrap__mark2{
+.text-wrap__mark2 h4{
+    display: inline-block;
     margin-bottom: 12px;
+    padding: 7px 15px;
     border: 1px solid #dadada;
     border-radius: 5px;
     font-size: 18px;
@@ -1149,13 +1174,13 @@ span.swiper-pagination-bullet-active:before{
     background-color: #ededed;
 }
 .text-wrap ul {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     padding-top: 10px;
 }
 .text-wrap ul li {
     position: relative;
-    margin-bottom: 12px;
-    padding-left: 21px;
+    margin-bottom: 24px;
+    padding-left: 30px;
 }
 .text-wrap ul li:before{
     position: absolute;
@@ -1167,14 +1192,14 @@ span.swiper-pagination-bullet-active:before{
     content: '';
 }
 .text-wrap ol {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     padding-top: 10px;
     counter-reset: list 0;
 }
-.text-wrap li {
+.text-wrap ol li {
     position: relative;
-    margin-bottom: 12px;
-    padding-left: 40px;
+    margin-bottom: 26px;
+    padding-left: 29px;
 }
 .text-wrap ol li:before{
     counter-increment: list;
@@ -1182,26 +1207,114 @@ span.swiper-pagination-bullet-active:before{
     position: absolute;
     top: -1px;
     left: 0;
-    width: 33px;
-    height: 27px;
-    border-radius: 3px;
-    background-color: #c3c3c3;
-    color: #fff;
+    color: #e41717;
     font-size: 14px;
-    font-weight: 600;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    font-weight: 700;
     text-align: center;
+}
+.text-wrap .link1{
+    text-decoration: underline;
+}
+.text-wrap .link2{
+    color: #e41717;
+    text-decoration: underline;
+}
+.text-wrap .span1{
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.text-wrap .span2{
+    color: #e41717;
+    font-weight: 700;
 }
 .span1{
     color: #ffcb08;
     font-weight: 600;
 }
-
 .span2{
     color: #0095da;
     font-weight: 600;
 }
 /* --------------- /text-wrap --------------- */
+
+/* --------------- table --------------- */
+.table_mark {
+    width: 825px;
+    margin-bottom: 30px;
+}
+.table_mark p{
+    margin: 0;
+}
+.table_mark table{
+    width: 100%;
+}
+.table_mark table td{
+    vertical-align: middle;
+    padding: 0 32px;
+}
+.table_mark thead td{
+    height: 33px;
+    color: #fff;
+    background-color: #e41717;
+}
+.table_mark tbody td{
+    height: 39px;
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+.table_border{
+    width: 825px;
+    margin-bottom: 30px;
+    padding: 0 1px;
+    border: 1px solid #000;
+    border-left-width: 3px;
+    border-right-width: 3px;
+}
+.table_border p{
+    margin: 0;
+}
+.table_border table{
+    width: 100%;
+}
+.table_border table td{
+    height: 39px;
+    vertical-align: middle;
+    padding: 0 32px;
+    border: 1px solid #000;
+}
+.table_border thead td{
+    border-top: 0;
+}
+.table_border tbody tr:last-child td{
+    border-bottom: 0;
+}
+.table_main{
+    width: 825px;
+    margin-bottom: 30px;
+}
+.table_main p{
+    margin: 0;
+    line-height: 14px;
+}
+.table_main table{
+    width: 100%;
+}
+.table_main table td{
+    height: 39px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+}
+.table_main thead td{
+    font-weight: 700;
+    color: #e41717;
+}
+.table_main tbody tr:last-child td{
+    border-bottom: 0;
+}
+/* --------------- /table --------------- */
 
 /* --------------- pay --------------- */
 .pay{
