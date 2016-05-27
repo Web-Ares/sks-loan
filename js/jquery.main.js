@@ -31,22 +31,43 @@ $(function(){
         }
     });
 
+    var date = new Date();
+    var options = {
+        /* era: 'long',*/
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+        /*weekday: 'long',
+         timezone: 'UTC',
+         hour: 'numeric',
+         minute: 'numeric',
+         second: 'numeric'*/
+    };
+    $('#present-data').text(date.toLocaleString("ru", options));
+    $('#now_date').val(date.toLocaleString("ru", options)); /*.innerHTML*/
+
     sum.noUiSlider.on('update', function( values, handle ) {
         $('.pay-sum').text(parseInt(values[handle])); /*.innerHTML*/
         $('#request-send-sum').val(parseInt(values[handle])); /*.innerHTML*/
     });
     week.noUiSlider.on('update', function( values, handle ) {
         $('.pay-week').text(parseInt(values[handle])); /*.innerHTML*/
-        $('#request-send-week').val(parseInt(values[handle])); /*.innerHTML*/
+        $('#weeks').val(parseInt(values[handle])); /*.innerHTML*/
+        var today = new Date(),
+            inWeek = new Date();
+        inWeek.setDate(today.getDate()+7*parseInt(values[handle]));
+        $('#end-data').text(inWeek.toLocaleString("ru", options) );
+        $('#end_data').val(inWeek.toLocaleString("ru", options)); /*.innerHTML*/
+
     });
     moneyPay.noUiSlider.on('update', function( values, handle ) {
         $('#get-number').val(parseInt(values[handle])); /*.innerHTML*/
     });
 
 
-   /* input.addEventListener('change', function(){
-        keypressSlider.noUiSlider.set([null, this.value]);
-    });*/
+    /* input.addEventListener('change', function(){
+         keypressSlider.noUiSlider.set([null, this.value]);
+     });*/
 
     $('.swiper-container').each(function () {
         Slider($(this));
@@ -95,14 +116,17 @@ $(function(){
 
             $.each($('.map__item'), function(i){
                 var curElem = $(this);
-
                 if (curElem.attr('data-coord')) {
                     var coord = curElem.attr('data-coord').split(', ');
 
                     myMap.geoObjects.add(new ymaps.Placemark(
                         [coord[0], coord[1]],
-                        {   hintContent: "CКС Ломбард",
+                        {   hintContent: "Описание",
                             balloonContentBody: curElem.find('a').text() }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: curElem.attr('data-icon'),
+                            iconImageSize: curElem.attr('data-icon-size').split(', '),
+                            iconImageOffset: [-15, -25]
                         }
                     ));
                 }

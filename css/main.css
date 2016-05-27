@@ -563,6 +563,7 @@ a{
     display: inline-block;
     vertical-align: top;
     position: relative;
+    width: 26%;
     font-size: 14px;
     line-height: 25px;
 }
@@ -570,6 +571,9 @@ a{
     display: block;
     font-size: 16px;
     font-weight: 600;
+}
+.request__result span.pay-sum{
+    display: inline-block;
 }
 .request__result div:first-child{
     padding-left: 43px;
@@ -945,6 +949,9 @@ span.swiper-pagination-bullet-active:before{
 }
 #map{
     height: 450px;
+}
+.map__item a{
+    display: none;
 }
 /* --------------- /map --------------- */
 
