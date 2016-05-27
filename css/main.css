@@ -1151,7 +1151,7 @@ span.swiper-pagination-bullet-active:before{
 }
 .text-wrap__mark1 h4{
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     padding: 7px 15px;
     border: 1px solid #ecc9c9;
     border-radius: 5px;
@@ -1163,7 +1163,7 @@ span.swiper-pagination-bullet-active:before{
 }
 .text-wrap__mark2 h4{
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     padding: 7px 15px;
     border: 1px solid #dadada;
     border-radius: 5px;
@@ -1235,6 +1235,31 @@ span.swiper-pagination-bullet-active:before{
 .span2{
     color: #0095da;
     font-weight: 600;
+}
+.text-wrap .alignleft {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+    border: 1px solid #dcdcdc;
+}
+.text-wrap .aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+    border: 1px solid #dcdcdc;
+}
+.text-wrap .alignright {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+    border: 1px solid #dcdcdc;
+}
+.text-wrap .alignnone {
+    margin: 0 25px 15px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+    border: 1px solid #dcdcdc;
 }
 /* --------------- /text-wrap --------------- */
 
@@ -1315,6 +1340,28 @@ span.swiper-pagination-bullet-active:before{
     border-bottom: 0;
 }
 /* --------------- /table --------------- */
+
+/* --------------- download --------------- */
+.download{
+    padding-top: 25px;
+}
+.download__item{
+    position: relative;
+    margin-bottom: 10px;
+    padding-top: 7px;
+    padding-left: 45px;
+    text-decoration: underline;
+}
+.download__item:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-image: url('../img/icons-pdf.png');
+    content: '';
+}
+/* --------------- /download --------------- */
 
 /* --------------- pay --------------- */
 .pay{
